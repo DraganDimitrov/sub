@@ -11,10 +11,12 @@
     <textarea name="input_text" id="input_text" rows="4" cols="50"></textarea>
     <br>
     <input type="submit" value="Submit">
+    <button class="copy-btn" onclick="copyText()">Copy</button>
+    <button class="clear-btn" onclick="clearText()">Clear</button>
+
 </form>
 <h2>Output title:</h2>
 <p id="output_text"></p>
-<button class="copy-btn" onclick="copyText()">Copy</button>
 
 <script>
     function copyText() {
@@ -26,6 +28,11 @@
         document.execCommand("copy");
         document.body.removeChild(textArea);
         alert("Copied to clipboard!");
+    }
+
+    function clearText() {
+        document.getElementById("input_text").value = "";
+        document.getElementById("output_text").textContent = "";
     }
 
     document.getElementById("myForm").addEventListener("submit", function(event) {
