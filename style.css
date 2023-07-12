@@ -1,0 +1,87 @@
+#output_text {
+    white-space: pre-wrap;
+}
+body {
+    background-image: linear-gradient(to left bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-repeat: no-repeat;
+    height: 779px;
+    font-family: "Tahoma";
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+#myForm {
+    text-align: center;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    resize: none;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+#output_text {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+}
+
+.copy-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}

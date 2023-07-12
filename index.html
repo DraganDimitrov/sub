@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subtitle FIX V.1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Subtitle FIX</h1>
+<form id="myForm">
+    <label for="input_text"><h2>Input Title:</h2></label>
+    <textarea name="input_text" id="input_text" rows="4" cols="50"></textarea>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<h2>Output title:</h2>
+<p id="output_text"></p>
+<button class="copy-btn" onclick="copyText()">Copy</button>
+
+<script>
+    function copyText() {
+        var outputText = document.getElementById("output_text");
+        var textArea = document.createElement("textarea");
+        textArea.value = outputText.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        alert("Copied to clipboard!");
+    }
+
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var input_text = document.getElementById("input_text").value;
+        var output_text = "";
+        for (var i = 0; i < input_text.length; i++) {
+            var c = input_text.charAt(i);
+            if (c == 'è') {
+                output_text += 'č';
+            } else if (c == 'È') {
+                output_text += 'Č';
+            } else if (c == 'æ') {
+                output_text += 'ć';
+            } else if (c == 'Æ') {
+                output_text += 'Ć';
+            } else {
+                output_text += c;
+            }
+        }
+        document.getElementById("output_text").textContent = output_text;
+    });
+</script>
+</body>
+</html>
+
